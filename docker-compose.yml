@@ -1,0 +1,12 @@
+
+
+services:
+  bind9: 
+    image: ubuntu/bind9
+    container_name: bind9_server
+    restart: always
+    ports: 
+      - 53:53
+    volumes:
+      - ./conf:/etc/bind
+      - ./zonas:/var/lib/bind
